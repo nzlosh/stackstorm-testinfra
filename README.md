@@ -1,6 +1,6 @@
-# testinfra integration pack v0.0.1
+# testinfra integration pack
 
-> StackStorm intergratation for Testinfra.
+> StackStorm integration for Testinfra.
 Carlos <nzlosh@yahoo.com>
 
 ### Contributors
