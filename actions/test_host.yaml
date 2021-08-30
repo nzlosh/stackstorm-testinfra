@@ -1,0 +1,13 @@
+---
+  name: "test_host"
+  runner_type: "python-script"
+  description: "Run testinfra tests against the host."
+  enabled: true
+  entry_point: "test_host.py"
+  parameters:
+    host:
+      type: string
+      description: "Host to execute tests on."
+      required: false
+      default: "localhost"
+
