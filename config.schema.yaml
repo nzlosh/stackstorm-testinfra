@@ -1,0 +1,19 @@
+---
+default_profile:
+  description: "The default profile to use in actions when none is given."
+  type: string
+  required: true
+profiles:
+  description: "A profile describing environment and credentials require to establish a connection."
+  type: "array"
+  required: true
+  items:
+    type: "object"
+    required: true
+    additionalProperties: false
+    properties:
+      name:
+        description: "Name of the profile."
+        type: "string"
+        secret: false
+        required: true

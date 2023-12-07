@@ -1,13 +1,22 @@
----
-  name: "test_host"
-  runner_type: "python-script"
-  description: "Run testinfra tests against the host."
-  enabled: true
-  entry_point: "test_host.py"
-  parameters:
-    host:
-      type: string
-      description: "Host to execute tests on."
-      required: false
-      default: "localhost"
-
+name: "test_host"
+runner_type: "python-script"
+description: "Run testinfra tests against the host."
+enabled: true
+entry_point: "test_host.py"
+parameters:
+  hosts:
+    type: array
+    description: "List of hosts to execute tests on."
+    required: false
+    default: ["localhost"]
+    properties:
+      items:
+        type: string
+  test_path:
+    type: string
+    description: "The file or directory that contains the tests to be run."
+    required: true
+  profile_name:
+    type: string
+    description: "Profile to name to use when running the action."
+    required: false

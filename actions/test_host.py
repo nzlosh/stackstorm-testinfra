@@ -1,12 +1,13 @@
-from lib.base import TestInfraAction
+from actionlib.base import TestInfraAction
 
+import pytest
 
 class RunTest(TestInfraAction):
     """
     Run testinfra tests against the host.
     """
 
-    def run(self, host):
+    def run(self, hosts, test_path, profile_name):
         super().run()
 
-        raise NotImplementedError
+        retcode = pytest.main()
